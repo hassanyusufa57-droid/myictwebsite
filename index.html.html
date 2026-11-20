@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hassan T/Wada ICT Center - cyber café, printing, typing, online registration and computer training.">
+<title>HASSAN T/WADA ICT CENTER</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e2a2f; --teal:#0f766e; --mint:#d9efe9; --paper:#f4f7f5;
+  --amber:#f2a33a; --white:#fff; --muted:#4d6468;
+  --head:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+  --body:"Source Sans 3",Calibri,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;font-size:1.05rem}
+h1,h2,h3{font-family:var(--head);line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:min(1100px,92%);margin-inline:auto}
+
+/* Header */
+header{position:sticky;top:0;z-index:10;background:var(--ink);color:var(--white)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--head);font-weight:800;letter-spacing:.3px}
+.logo-mark{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--amber);display:block}
+.logo span{font-size:1.05rem}
+nav ul{display:flex;list-style:none;gap:.3rem;flex-wrap:wrap}
+nav a{display:block;padding:.45rem .85rem;border-radius:6px;text-decoration:none;font-weight:600}
+nav a:hover{background:var(--teal)}
+
+/* Home */
+#home{color:var(--white);padding:5.5rem 0 5rem;
+  background:
+   linear-gradient(rgba(14,42,47,.88),rgba(14,42,47,.92)),
+   repeating-linear-gradient(0deg,transparent 0 39px,rgba(255,255,255,.07) 39px 40px),
+   repeating-linear-gradient(90deg,transparent 0 39px,rgba(255,255,255,.07) 39px 40px),
+   var(--ink);
+}
+#home .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
+#home h1{font-size:clamp(2.2rem,5.5vw,3.8rem);font-weight:800;margin-bottom:1rem}
+#home p{max-width:52ch;color:#cfe3de;margin-bottom:1.8rem}
+.btn{display:inline-block;padding:.8rem 1.5rem;border-radius:8px;font-weight:600;text-decoration:none;margin-right:.6rem;margin-bottom:.5rem}
+.btn-main{background:var(--amber);color:var(--ink)}
+.btn-main:hover{background:#ffb95a}
+.btn-line{border:2px solid #cfe3de;color:var(--white)}
+.btn-line:hover{background:var(--white);color:var(--ink)}
+.ticket{background:var(--paper);color:var(--ink);border-radius:14px;padding:1.6rem;border-left:10px solid var(--amber);box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.ticket h2{font-size:1.3rem;margin-bottom:.8rem}
+.ticket dl{display:grid;grid-template-columns:auto 1fr;gap:.45rem 1rem}
+.ticket dt{font-weight:600;color:var(--teal)}
+.ticket dd{text-align:right}
+
+/* Sections */
+section{padding:4.5rem 0}
+.title{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:.6rem}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:2.2rem}
+
+/* About */
+#about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+#about p{margin-bottom:1rem;max-width:62ch}
+#about h3{margin:.4rem 0 .6rem;font-size:1.25rem}
+.facts{list-style:none;display:grid;gap:.8rem}
+.facts li{background:var(--white);border-radius:10px;padding:1rem 1.2rem;border-left:5px solid var(--teal)}
+.facts strong{display:block;font-family:var(--head)}
+
+/* Services */
+#services{background:var(--mint)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+.card{background:var(--white);border-radius:12px;padding:1.5rem}
+.card h3{font-size:1.15rem;margin-bottom:.4rem;color:var(--teal)}
+.card p{color:var(--muted);font-size:1rem}
+.card .ico{font-size:1.8rem;margin-bottom:.4rem}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.gallery figure{background:var(--white);border-radius:12px;overflow:hidden}
+.gallery img{display:block;width:100%;height:220px;object-fit:cover}
+.gallery figcaption{padding:.7rem 1rem;font-weight:600}
+
+/* Contact */
+#contact{background:var(--ink);color:var(--white)}
+#contact .lead{color:#cfe3de}
+#contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.info p{margin-bottom:.9rem}
+.info strong{color:var(--amber)}
+form{display:grid;gap:.8rem}
+label{font-weight:600}
+input,textarea{width:100%;padding:.7rem .9rem;border:2px solid transparent;border-radius:8px;font:inherit;background:var(--paper);color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--amber);outline:none}
+textarea{min-height:120px;resize:vertical}
+button{justify-self:start;border:0;cursor:pointer;font:inherit;font-weight:600;padding:.8rem 1.6rem;border-radius:8px;background:var(--amber);color:var(--ink)}
+button:hover{background:#ffb95a}
+
+/* Footer */
+footer{background:#081a1d;color:#b8cfca;text-align:center;padding:1.4rem 4%;font-size:.95rem}
+
+/* Responsive */
+@media (max-width:800px){
+  #home .wrap,#about .wrap,#contact .wrap{grid-template-columns:1fr;gap:2rem}
+  #home{padding:3.5rem 0}
+  section{padding:3.2rem 0}
+  header .wrap{justify-content:center}
+  nav ul{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#home" class="logo" aria-label="Hassan T/Wada ICT Center home">
+      <img class="logo-mark" src="data:image/jpeg;base64,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" alt="Engr. Hassan logo" width="44" height="44">
+      <span>HASSAN T/WADA ICT CENTER</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home">
+    <div class="wrap">
+      <div>
+        <h1>Fast internet. Clean prints. Friendly help.</h1>
+        <p>Welcome to Hassan T/Wada ICT Center, your neighbourhood café for browsing, printing, typing, online registration and computer training. Walk in, sit down and get your work done.</p>
+        <a class="btn btn-main" href="#services">See our services</a>
+        <a class="btn btn-line" href="#contact">Visit us</a>
+      </div>
+      <aside class="ticket" aria-label="Opening hours and sample prices">
+        <h2>Today at the center</h2>
+        <dl>
+          <dt>Monday – Saturday</dt><dd>8:00am – 8:00pm</dd>
+          <dt>Sunday</dt><dd>2:00pm – 7:00pm</dd>
+          <dt>Browsing</dt><dd>from ₦200 / hour</dd>
+          <dt>Printing</dt><dd>from ₦50 / page</dd>
+          <dt>Photocopy</dt><dd>from ₦30 / page</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div>
+        <h2 class="title">About the center</h2>
+        <p>An ICT café is a public place where people can use computers and the internet when they do not have their own. Hassan T/Wada ICT Center was set up to make technology easy to reach for students, job seekers, traders and small business owners.</p>
+        <p>We help people apply for schools and jobs, register for exams, print documents and learn basic computer skills. Our staff are always on hand, so nobody has to struggle alone with a form or a file.</p>
+        <h3>Why people choose us</h3>
+        <p>We keep our prices fair, our machines clean and our internet steady. Backup power keeps your work safe when the light goes off.</p>
+      </div>
+      <ul class="facts">
+        <li><strong>Reliable internet</strong>Stable connection for browsing, downloads and online exams.</li>
+        <li><strong>Trained staff</strong>Help with forms, scanning, typing and document layout.</li>
+        <li><strong>Standby power</strong>Generator and inverter, so work continues during outages.</li>
+        <li><strong>Private and safe</strong>Your files and passwords are never kept or shared.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 class="title">What we offer</h2>
+      <p class="lead">Everything you need to get online and get documents done, under one roof.</p>
+      <div class="cards">
+        <article class="card"><div class="ico" aria-hidden="true">🌐</div><h3>Internet browsing</h3><p>Fast hourly browsing for research, email, downloads and video calls.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true">🖨️</div><h3>Printing and photocopy</h3><p>Black and white or colour printing, photocopying and lamination.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true">📝</div><h3>Typing and scanning</h3><p>CVs, letters, assignments and project work typed, edited and scanned.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true">🎓</div><h3>Online registration</h3><p>JAMB, WAEC, NECO, school portals and job applications handled with you.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true">💻</div><h3>Computer training</h3><p>Beginner lessons in Microsoft Office, typing and safe internet use.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true">🔧</div><h3>Phone and PC support</h3><p>Software installation, phone setup and basic troubleshooting.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <h2 class="title">Inside the center</h2>
+      <p class="lead">A look at the equipment and spaces you will use.</p>
+      <div class="gallery">
+        <figure>
+          <img alt="Computer workstation" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23d9efe9'/%3E%3Crect x='90' y='50' width='220' height='140' rx='10' fill='%230e2a2f'/%3E%3Crect x='102' y='62' width='196' height='116' fill='%230f766e'/%3E%3Crect x='120' y='80' width='100' height='10' fill='%23f2a33a'/%3E%3Crect x='120' y='100' width='150' height='8' fill='%23d9efe9'/%3E%3Crect x='120' y='118' width='130' height='8' fill='%23d9efe9'/%3E%3Crect x='185' y='190' width='30' height='30' fill='%230e2a2f'/%3E%3Crect x='140' y='220' width='120' height='12' rx='6' fill='%230e2a2f'/%3E%3Crect x='110' y='250' width='180' height='22' rx='5' fill='%23fff'/%3E%3C/svg%3E">
+          <figcaption>Computer workstations</figcaption>
+        </figure>
+        <figure>
+          <img alt="Printer and documents" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23fdf0dc'/%3E%3Crect x='130' y='40' width='140' height='70' fill='%23fff' stroke='%230e2a2f' stroke-width='4'/%3E%3Crect x='80' y='100' width='240' height='100' rx='12' fill='%230e2a2f'/%3E%3Crect x='100' y='120' width='60' height='10' fill='%23f2a33a'/%3E%3Crect x='120' y='180' width='160' height='80' fill='%23fff' stroke='%230e2a2f' stroke-width='4'/%3E%3Crect x='135' y='198' width='130' height='7' fill='%230f766e'/%3E%3Crect x='135' y='216' width='100' height='7' fill='%230f766e'/%3E%3C/svg%3E">
+          <figcaption>Printing and photocopy</figcaption>
+        </figure>
+        <figure>
+          <img alt="Wi-Fi signal" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%230e2a2f'/%3E%3Cg fill='none' stroke='%23f2a33a' stroke-width='16' stroke-linecap='round'%3E%3Cpath d='M90 130a160 160 0 0 1 220 0'/%3E%3Cpath d='M128 168a105 105 0 0 1 144 0'/%3E%3Cpath d='M164 206a52 52 0 0 1 72 0'/%3E%3C/g%3E%3Ccircle cx='200' cy='240' r='14' fill='%23f2a33a'/%3E%3C/svg%3E">
+          <figcaption>Fast Wi-Fi internet</figcaption>
+        </figure>
+        <figure>
+          <img alt="Student learning on a laptop" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23d9efe9'/%3E%3Ccircle cx='200' cy='80' r='34' fill='%23f2a33a'/%3E%3Cpath d='M140 160q60-50 120 0v30H140z' fill='%230f766e'/%3E%3Cpath d='M110 200h180l30 50H80z' fill='%230e2a2f'/%3E%3Crect x='130' y='205' width='140' height='6' fill='%23d9efe9'/%3E%3C/svg%3E">
+          <figcaption>Computer training class</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="info">
+        <h2 class="title">Contact us</h2>
+        <p class="lead">Call, message or just walk in. We are happy to help.</p>
+        <p><strong>Location:</strong> Tudun Wada Dankadai, Kano State, Nigeria</p>
+        <p><strong>Phone / WhatsApp:</strong> +234 810 191 2160</p>
+        <p><strong>Email:</strong> hassanyusufa57@gmail.com</p>
+        <p><strong>Hours:</strong> Mon – Sat 8:00am – 8:00pm, Sun 2:00pm – 7:00pm</p>
+      </div>
+      <form action="#" method="post" onsubmit="event.preventDefault();alert('Thank you! Your message has been received.');this.reset();">
+        <div><label for="name">Your name</label><input id="name" name="name" type="text" required></div>
+        <div><label for="email">Your email</label><input id="email" name="email" type="email" required></div>
+        <div><label for="msg">Message</label><textarea id="msg" name="message" required></textarea></div>
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year">2026</span> | Designed by HASSAN YUSUF ALIYU | Registration Number: UG25/COMS/2/2015 | All rights reserved.</p>
+</footer>
+
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
